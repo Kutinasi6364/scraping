@@ -1,0 +1,195 @@
+<rss version="2.0">
+<channel>
+<title>gihyo.jp：総合</title>
+<link>https://gihyo.jp/</link>
+<description>gihyo.jp（総合）の更新情報をお届けします</description>
+<language>ja-jp</language>
+<copyright>技術評論社 2022</copyright>
+<lastBuildDate>Thu, 23 Jun 2022 19:52:00 +0900</lastBuildDate>
+<image>
+<url>https://gihyo.jp/assets/templates/gihyojp2007/image/header_logo_gihyo.gif</url>
+<title>gihyo.jp</title>
+<link>https://gihyo.jp/</link>
+</image>
+<item>
+<title>2022年6月第4週　Android 13 Beta 3.2がリリース，Android for Carsの最新事情 ── Android Weekly Topics</title>
+<link>https://gihyo.jp/lifestyle/clip/01/awt/202206/23</link>
+<description>2022年6月第4週のAndroid関連のニュースをお届けします。</description>
+<pubDate>Thu, 23 Jun 2022 09:11:00 +0900</pubDate>
+<category domain="https://gihyo.jp/lifestyle/clip/01/awt">Android Weekly Topics</category>
+<guid>https://gihyo.jp/lifestyle/clip/01/awt/202206/23</guid>
+<author>傍島康雄</author>
+</item>
+<item>
+<title>GitHub，AIペアプログラマー「GitHub Copilot」を正式リリース ── ニュースリリース</title>
+<link>https://gihyo.jp/news/nr/2022/06/2201</link>
+<description>GitHubは6月22日，入力したコードとコメントから推論されるコードをAIを使って自動的に提案するツール「GitHub Copilot」を正式リリースした。</description>
+<pubDate>Wed, 22 Jun 2022 16:11:00 +0900</pubDate>
+<category domain="https://gihyo.jp/news/nr">ニュースリリース</category>
+<guid>https://gihyo.jp/news/nr/2022/06/2201</guid>
+<author>技術評論社</author>
+</item>
+<item>
+<title>2022年6月22日　ノッてるね！ ── 帰ってきた『技評ねこ部通信』</title>
+<link>https://gihyo.jp/lifestyle/clip/01/monthly-cat/202206/0622</link>
+<description>ツイてるかどうかはわかりませんが、ノッテるのは確かです。</description>
+<pubDate>Wed, 22 Jun 2022 15:00:00 +0900</pubDate>
+<category domain="https://gihyo.jp/lifestyle/clip/01/monthly-cat">帰ってきた『技評ねこ部通信』</category>
+<guid>https://gihyo.jp/lifestyle/clip/01/monthly-cat/202206/0622</guid>
+<author/>
+</item>
+<item>
+<title>第720回　Ubuntuの最小インストールとFlatpakでいつでも最新アプリ生活 ── Ubuntu Weekly Recipe</title>
+<link>https://gihyo.jp/admin/serial/01/ubuntu-recipe/0720</link>
+<description>今回は，Ubuntuでベースのシステムは安定させつつ，アプリケーションは新しいバージョンを使用したい場合のセットアップ方法を紹介します。</description>
+<pubDate>Wed, 22 Jun 2022 09:53:00 +0900</pubDate>
+<category domain="https://gihyo.jp/admin/serial/01/ubuntu-recipe">Ubuntu Weekly Recipe</category>
+<guid>https://gihyo.jp/admin/serial/01/ubuntu-recipe/0720</guid>
+<author>あわしろいくや</author>
+</item>
+<item>
+<title>2022年6月22日　RHEL互換OSのAlmaLinux，ディストリビューション/パッケージのビルドを自動化する「AlmaLinux Build System」を公開 ── Linux Daily Topics</title>
+<link>https://gihyo.jp/admin/clip/01/linux_dt/202206/22</link>
+<description>AlmaLinux OS Foundationは6月20日，ディストリビューションやパッケージのビルドからリリースまでを自動化するシステム「AlmaLinux Build System」をリードオンリーで公開した。</description>
+<pubDate>Wed, 22 Jun 2022 09:15:00 +0900</pubDate>
+<category domain="https://gihyo.jp/admin/clip/01/linux_dt">Linux Daily Topics</category>
+<guid>https://gihyo.jp/admin/clip/01/linux_dt/202206/22</guid>
+<author>階戸アキラ</author>
+</item>
+<item>
+<title>ソラコム，オンライン年次カンファレンス「SORACOM Discovery 2022 Online」7/6，7に開催 ── インフォメーション</title>
+<link>https://gihyo.jp/news/info/2022/06/2101</link>
+<description>（株）ソラコムは，年次カンファレンス「SORACOM Discovery 2022 Online」を，2022年7月6日（水），7日（木）の2日間にわたり開催する。</description>
+<pubDate>Tue, 21 Jun 2022 09:41:00 +0900</pubDate>
+<category domain="https://gihyo.jp/news/info">インフォメーション</category>
+<guid>https://gihyo.jp/news/info/2022/06/2101</guid>
+<author>技術評論社</author>
+</item>
+<item>
+<title>第5回　VRの魅力とエンジニアの情熱 ── ちょっと気になる隣の技術畑</title>
+<link>https://gihyo.jp/dev/serial/01/technical_field/0005</link>
+<description>今回のテーマはVR（Virtual Reality）です。VRゲーム「アルトデウス」の開発者中地さんにユーザー体験のデザインや没入感、技術の魅力を伝えていただきます。</description>
+<pubDate>Tue, 21 Jun 2022 09:15:00 +0900</pubDate>
+<category domain="https://gihyo.jp/dev/serial/01/technical_field">ちょっと気になる隣の技術畑</category>
+<guid>https://gihyo.jp/dev/serial/01/technical_field/0005</guid>
+<author>日高正博</author>
+</item>
+<item>
+<title>2022年6月20日　ワンライナーのお手本!? SUSEエンジニアが作成したext4のパフォーマンス改善パッチ ── Linux Daily Topics</title>
+<link>https://gihyo.jp/admin/clip/01/linux_dt/202206/20</link>
+<description>ext4の遅延割り当て機能は，データがディスクに書き込まれる際に複数のブロックを連続した状態で確保できることから，パフォーマンス向上に大きな効果があるとされている。</description>
+<pubDate>Mon, 20 Jun 2022 11:55:00 +0900</pubDate>
+<category domain="https://gihyo.jp/admin/clip/01/linux_dt">Linux Daily Topics</category>
+<guid>https://gihyo.jp/admin/clip/01/linux_dt/202206/20</guid>
+<author>階戸アキラ</author>
+</item>
+<item>
+<title>2022年6月17日号　Ubuntu Core 22のリリース，22.10（kinetic）の開発 / ”Enterprise Desktop” ── Ubuntu Weekly Topics</title>
+<link>https://gihyo.jp/admin/clip/01/ubuntu-topics/202206/17</link>
+<description>Ubuntuの「組み込み向け」リリース，Ubuntu Core 22（22.04 LTSベース）がリリースされました。また，デスクトップ関連の開発ではこれまで「AD」という分類だったタスクが「Enterprise Desktop / AD」という名称に置き換えられています。</description>
+<pubDate>Fri, 17 Jun 2022 09:48:00 +0900</pubDate>
+<category domain="https://gihyo.jp/admin/clip/01/ubuntu-topics">Ubuntu Weekly Topics</category>
+<guid>https://gihyo.jp/admin/clip/01/ubuntu-topics/202206/17</guid>
+<author>吉田史</author>
+</item>
+<item>
+<title>第72回　初学者に伝えたい Perl学習の勘所 ―勉強会を10年運営して培ったノウハウ（2） ── Perl Hackers Hub</title>
+<link>https://gihyo.jp/dev/serial/01/perl-hackers-hub/007202</link>
+<description>今回のハッカーは初学者のPerl学習を支援する勉強会「Perl入学式」の運営に携わっている尾形鉄次さん，和田智さん，三島智一さんで，テーマは「初学者に伝えたいPerl学習の勘所」，（1）の続きです。</description>
+<pubDate>Fri, 17 Jun 2022 09:17:00 +0900</pubDate>
+<category domain="https://gihyo.jp/dev/serial/01/perl-hackers-hub">Perl Hackers Hub</category>
+<guid>https://gihyo.jp/dev/serial/01/perl-hackers-hub/007202</guid>
+<author>三島智一，和田智，尾形鉄次</author>
+</item>
+<item>
+<title>データエンジニア大集合！「実践的データ基盤への処方箋」輪読会レポート 〜データ整備編〜 ── レポート</title>
+<link>https://gihyo.jp/news/report/2022/06/0601</link>
+<description>データエンジニアリング，データ活用の知見の共有を目的としたコミュニティdatatech-jpの協力のもと「実践的データ基盤への処方箋」の輪読会がオンライン形式で開催されました。輪読会は3回に分けて開催され，発表者だけでなく執筆者も参加し，書籍では扱えなかった内容についても議論が交わされました。本稿では輪読会の様子をダイジェストで紹介します。</description>
+<pubDate>Thu, 16 Jun 2022 12:00:00 +0900</pubDate>
+<category domain="https://gihyo.jp/news/report">レポート</category>
+<guid>https://gihyo.jp/news/report/2022/06/0601</guid>
+<author>高屋卓也</author>
+</item>
+<item>
+<title>第72回　初学者に伝えたい Perl学習の勘所 ―勉強会を10年運営して培ったノウハウ（1） ── Perl Hackers Hub</title>
+<link>https://gihyo.jp/dev/serial/01/perl-hackers-hub/007201</link>
+<description>本連載では第一線のPerlハッカーが回替わりで執筆していきます。今回のハッカーは初学者のPerl学習を支援する勉強会「Perl入学式」の運営に携わっている尾形鉄次さん、和田智さん、三島智一さんで、テーマは「初学者に伝えたいPerl学習の勘所」です。</description>
+<pubDate>Thu, 16 Jun 2022 09:19:00 +0900</pubDate>
+<category domain="https://gihyo.jp/dev/serial/01/perl-hackers-hub">Perl Hackers Hub</category>
+<guid>https://gihyo.jp/dev/serial/01/perl-hackers-hub/007201</guid>
+<author>三島智一，和田智，尾形鉄次</author>
+</item>
+<item>
+<title>2022年6月第3週　セキュリティと使い勝手が強化！Android 13 Betaが安定版に ── Android Weekly Topics</title>
+<link>https://gihyo.jp/lifestyle/clip/01/awt/202206/16</link>
+<description>次期Android OSとなるAndroid 13は，ベータリリースの段階ですがAPIなどが最終版になった安定化バージョン「Android 13 Beta 3」が公開されました。</description>
+<pubDate>Thu, 16 Jun 2022 09:18:00 +0900</pubDate>
+<category domain="https://gihyo.jp/lifestyle/clip/01/awt">Android Weekly Topics</category>
+<guid>https://gihyo.jp/lifestyle/clip/01/awt/202206/16</guid>
+<author>傍島康雄</author>
+</item>
+<item>
+<title>第719回　UbuntuでDocker Desktop for Linuxを使う ── Ubuntu Weekly Recipe</title>
+<link>https://gihyo.jp/admin/serial/01/ubuntu-recipe/0719</link>
+<description>今回は，Ubuntu上でDocker Desktop for Linux（DD4L）を使う具体的な方法を，その機能と合わせて詳しく紹介していきましょう。</description>
+<pubDate>Wed, 15 Jun 2022 09:56:00 +0900</pubDate>
+<category domain="https://gihyo.jp/admin/serial/01/ubuntu-recipe">Ubuntu Weekly Recipe</category>
+<guid>https://gihyo.jp/admin/serial/01/ubuntu-recipe/0719</guid>
+<author>水野源</author>
+</item>
+<item>
+<title>第173回　MySQLで整数型を扱ってみる ── MySQL道普請便り</title>
+<link>https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0173</link>
+<description>今回は，何気なく使っている数字ですが，予期せず使っていて問題が起こってしまうことも多いため，MySQLで扱える整数型について紹介をしていきます。</description>
+<pubDate>Tue, 14 Jun 2022 10:12:00 +0900</pubDate>
+<category domain="https://gihyo.jp/dev/serial/01/mysql-road-construction-news">MySQL道普請便り</category>
+<guid>https://gihyo.jp/dev/serial/01/mysql-road-construction-news/0173</guid>
+<author>木村浩一郎</author>
+</item>
+<item>
+<title>2022年6月13日 ── 帰ってきた『技評ねこ部通信』</title>
+<link>https://gihyo.jp/lifestyle/clip/01/monthly-cat/202206/0613</link>
+<description>雨上がりはねこがわさわさ現れる・・・気がするのはねこ部だけでしょうか？</description>
+<pubDate>Mon, 13 Jun 2022 15:00:00 +0900</pubDate>
+<category domain="https://gihyo.jp/lifestyle/clip/01/monthly-cat">帰ってきた『技評ねこ部通信』</category>
+<guid>https://gihyo.jp/lifestyle/clip/01/monthly-cat/202206/0613</guid>
+<author/>
+</item>
+<item>
+<title>#01　期待される“クラウド運用エンジニア”の可能性 ―「Cloud Operator Days Tokyo 2022」プレイベントから ── クラウド運用のリアルを変革につなげるには？―「Cloud Operator Days Tokyo 2022」の歩き方</title>
+<link>https://gihyo.jp/admin/serial/01/codt2022/0001</link>
+<description>「Cloud Operator Days Tokyo 2022」メインのセッションに先立ち，5/31に開催されプレイベントの模様をお伝えしながら，「Cloud Operator Days Tokyo 2022」の見どころ，歩き方をご紹介します。</description>
+<pubDate>Fri, 10 Jun 2022 15:43:00 +0900</pubDate>
+<category domain="https://gihyo.jp/admin/serial/01/codt2022">クラウド運用のリアルを変革につなげるには？―「Cloud Operator Days Tokyo 2022」の歩き方</category>
+<guid>https://gihyo.jp/admin/serial/01/codt2022/0001</guid>
+<author/>
+</item>
+<item>
+<title>2022年6月10日号　22.10の開発/WPA_Supplicantの置き換えとfdk-aacの取り込み，“adwatchd” ── Ubuntu Weekly Topics</title>
+<link>https://gihyo.jp/admin/clip/01/ubuntu-topics/202206/10</link>
+<description>22.10（kinetic）の開発上，大きな動きはないものの，WPA_SupplicantからIWDへの置き換えが進められていることをPhoronixが報じています。</description>
+<pubDate>Fri, 10 Jun 2022 09:54:00 +0900</pubDate>
+<category domain="https://gihyo.jp/admin/clip/01/ubuntu-topics">Ubuntu Weekly Topics</category>
+<guid>https://gihyo.jp/admin/clip/01/ubuntu-topics/202206/10</guid>
+<author>吉田史</author>
+</item>
+<item>
+<title>2022年6月第2週　登場まで待てない！Pixel Tabletへの期待 ── Android Weekly Topics</title>
+<link>https://gihyo.jp/lifestyle/clip/01/awt/202206/09</link>
+<description>Google I/O 2022で、Android OSの最新バージョンとなるAndroid 13の情報が公開されました。</description>
+<pubDate>Thu, 09 Jun 2022 09:21:00 +0900</pubDate>
+<category domain="https://gihyo.jp/lifestyle/clip/01/awt">Android Weekly Topics</category>
+<guid>https://gihyo.jp/lifestyle/clip/01/awt/202206/09</guid>
+<author>傍島康雄</author>
+</item>
+<item>
+<title>第718回　needrestartで学ぶパッケージのフック処理 ── Ubuntu Weekly Recipe</title>
+<link>https://gihyo.jp/admin/serial/01/ubuntu-recipe/0718</link>
+<description>今回は，パッケージの更新時に再起動が必要なデーモンを通知してくれる仕組みであるneedrestartについて，その設定方法と，どういう仕組みで動いているのかを解説します。</description>
+<pubDate>Wed, 08 Jun 2022 09:51:00 +0900</pubDate>
+<category domain="https://gihyo.jp/admin/serial/01/ubuntu-recipe">Ubuntu Weekly Recipe</category>
+<guid>https://gihyo.jp/admin/serial/01/ubuntu-recipe/0718</guid>
+<author>柴田充也</author>
+</item>
+</channel>
+</rss>

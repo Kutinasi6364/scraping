@@ -1,0 +1,792 @@
+<!DOCTYPE HTML>
+<html lang="ja" class="pc">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gihyo Digital Publishing … 技術評論社の電子書籍</title>
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta http-equiv="Content-Script-Type" content="application/javascript" />
+  <meta name="description" content="技術評論社の電子書籍（電子出版）販売サイト" />
+  <meta name="keywords" content="電子書籍,電子出版,EPUB,PDF,技術評論社" />
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="related" href="http://gihyo.jp/dp/catalogs.opds" type="application/atom+xml;profile=opds-catalog"
+    title="Gihyo Digital Publishing OPDS Catalog" />
+  <link rel="shortcut icon" href="/assets/templates/gdp/favicon.ico" type="image/vnd.microsoft.icon" />
+  <link rel="apple-touch-icon-precomposed" href="/dp/assets/gdp-icon.png" />
+  <!--[if lt IE 9]>
+    <script>var msie=8;</script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="/dp/assets/js/html5shiv.min.js"></script>
+    <script src="//css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <script src="/dp/assets/js/selectivizr-min.js"></script>
+    <script src="/dp/assets/js/addEventListener.min.js"></script>
+    <script src="/dp/assets/js/textContent.min.js"></script>
+  <![endif]-->
+  <!--[if lte IE 9]>
+    <script src="/dp/assets/js/classList.min.js" defer></script>
+  <![endif]-->
+  <link rel="stylesheet" href="/dp/assets/style/store0902.css" type="text/css" media="all" />
+  <script src="/dp/assets/js/gdpFunction0425.min.js" defer></script>
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@gihyoDP" />
+  <meta property="og:title" content="Gihyo Digital Publishing … 技術評論社の電子書籍" />
+  <meta property="og:type" content="website" />
+  <meta property="og:description" content="技術評論社の電子書籍（電子出版）販売サイト" />
+  <meta property="og:url" content="https://gihyo.jp/dp" />
+  <meta property="og:image" content="/dp/assets/gdp-icon.png" />
+  <meta property="og:site_name" content="Gihyo Digital Publishing" />
+  <meta property="fb:app_id" content="185201618169441" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DL906V3TN7"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-DL906V3TN7');
+  </script>
+</head>
+
+<body itemscope="itemscope" itemtype="http://schema.org/WebPage" class="page-home">
+  <header id="header" itemscope="itemscope" itemtype="http://schema.org/WPHeader">
+    <h1 class="home-title">Gihyo Digital Publishing</h1>
+    <h2 class="home-subtitle">技術評論社の電子書籍サイト</h2>
+    <nav id="headerFunction">
+      <div id="login">
+        <a href="#login" title="ログイン・会員登録">ログイン</a>
+      </div>
+      <div id="cart">
+        <a href="/dp/cart" title="カートは空です">カート</a>
+      </div>
+    </nav>
+  </header>
+  <div id="main">
+    <noscript>
+      <div id="noscript">
+        <p>本サイトではJavaScriptを使用しております。JavaScriptが無効な状態ではご利用いただけません。</p>
+      </div>
+    </noscript>
+
+    <div id="bookList">
+      <h2>商品一覧</h2>
+      <div id="topNavigation">
+        <div id="filter">
+          <form id="search" action="/dp" method="get">
+            <input type="search" name="query" id="searchText" title="検索する商品のキーワードを入力" placeholder="商品のキーワード"
+              required="required" value="" />
+            <input type="submit" id="searchSubmit" value="検索" title="検索する" />
+          </form>
+          <div id="select">
+            <a href="" id="selectLabel" title="商品ジャンルを選択する">すべての商品</a>
+            <div id="selectMenu">
+              <ul id="selectMenuBody">
+                <li class="title">商品ジャンルを選択</li>
+                <li class="selected"><a href="/dp">すべての商品</a></li>
+                <li><a href="/dp/genre/%E3%83%91%E3%82%BD%E3%82%B3%E3%83%B3">パソコン</a></li>
+                <li><a
+                    href="/dp/genre/%E3%82%B9%E3%83%9E%E3%83%BC%E3%83%88%E3%83%95%E3%82%A9%E3%83%B3%E3%83%BB%E3%82%BF%E3%83%96%E3%83%AC%E3%83%83%E3%83%88">スマートフォン・タブレット</a>
+                </li>
+                <li><a
+                    href="/dp/genre/%E3%83%87%E3%82%B6%E3%82%A4%E3%83%B3%E3%83%BB%E7%B4%A0%E6%9D%90%E9%9B%86">デザイン・素材集</a>
+                </li>
+                <li><a href="/dp/genre/Web%E3%82%B5%E3%82%A4%E3%83%88%E5%88%B6%E4%BD%9C">Webサイト制作</a></li>
+                <li><a
+                    href="/dp/genre/%E3%83%97%E3%83%AD%E3%82%B0%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%BB%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA">プログラミング・システム開発</a>
+                </li>
+                <li><a
+                    href="/dp/genre/%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%83%BBUNIX%E3%83%BB%E3%83%87%E3%83%BC%E3%82%BF%E3%83%99%E3%83%BC%E3%82%B9">ネットワーク・UNIX・データベース</a>
+                </li>
+                <li><a href="/dp/genre/%E8%B3%87%E6%A0%BC%E8%A9%A6%E9%A8%93%EF%BC%88IT%EF%BC%89">資格試験（IT）</a></li>
+                <li><a
+                    href="/dp/genre/%E8%B3%87%E6%A0%BC%E8%A9%A6%E9%A8%93%EF%BC%88%E4%B8%80%E8%88%AC%EF%BC%89%E3%83%BB%E5%A4%A7%E5%AD%A6%E5%8F%97%E9%A8%93">資格試験（一般）・大学受験</a>
+                </li>
+                <li><a
+                    href="/dp/genre/%E8%B6%A3%E5%91%B3%E3%83%BB%E5%AE%9F%E7%94%A8%E3%83%BB%E3%83%87%E3%82%B8%E3%82%AB%E3%83%A1">趣味・実用・デジカメ</a>
+                </li>
+                <li><a
+                    href="/dp/genre/%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9%E3%83%BB%E3%83%9E%E3%83%8D%E3%83%BC">ビジネス・マネー</a>
+                </li>
+                <li><a
+                    href="/dp/genre/%E7%90%86%E5%B7%A5%E3%83%BB%E3%82%B5%E3%82%A4%E3%82%A8%E3%83%B3%E3%82%B9">理工・サイエンス</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <nav id="pagingTop">
+          <ul>
+            <li><span class="prev">―</span></li>
+            <li class="paging-number">1</li>
+            <li><a href="/dp?start=30" title="次のページ" class="next">次</a></li>
+          </ul>
+        </nav>
+      </div>
+      <ul itemprop="isPartOf" itemscope="itemscope" itemtype="http://www.schema.org/CollectionPage" id="listBook"
+        class="list-book">
+        <li id="bannerTopAd">
+          <div id="topAdPrev"><a href="#adPrev" title="前のバナー">前</a></div>
+          <div id="topAdNext"><a href="#adNext" title="次のバナー">次</a></div>
+          <ul id="topAdNum"></ul>
+        </li>
+        <li class="subscription"><a href="/dp/subscription">
+            <p class="title"><span class="series">Software Design・<wbr>WEB+DB PRESS</span>電子版定期購読のお申し込み</p>
+            <img src="//image.gihyo.co.jp/assets/images/dummy.png"
+              srcset="//image.gihyo.co.jp/assets/images/gdp/subscription/subsc-cover.png 1x, //image.gihyo.co.jp/assets/images/gdp/subscription/subsc-cover@2x.png 2x"
+              width="236" height="138" alt="cover"
+              style="max-width:none;max-height:none;position:absolute;right:0;bottom:-10px;border:none"
+              decoding="async">
+            <ul class="format">
+              <li class="pdf">PDF</li>
+              <li class="epub">EPUB</li>
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12929-3"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12929-3">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12929-3.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12929-3.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12929-3.jpg 2x"
+              width="100" height="147" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">ゼロからはじめる</span> ゼロからはじめる<br>au AQUOS sense6s SHG07
+              スマートガイド</p>
+            <p itemprop="author" class="author">技術評論社編集部　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,580</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li class="notice"><time datetime="2022-6-28" itemprop="datePublished" class="published">2022年6月28日</time>
+              </li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12915-6"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12915-6">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12915-6.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12915-6.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12915-6.jpg 2x"
+              width="100" height="126" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title">作って学ぶコンピュータアーキテクチャ<br><span
+                class="sub">——<wbr>LLVM<wbr>と<wbr>RISC-V<wbr>による低レイヤプログラミングの基礎</span></p>
+            <p itemprop="author" class="author">木村優之　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">3,600</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li class="notice"><time datetime="2022-6-27" itemprop="datePublished" class="published">2022年6月27日</time>
+              </li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12891-3"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12891-3">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12891-3.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12891-3.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12891-3.jpg 2x"
+              width="100" height="141" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title">WEB+DB PRESS Vol.129</p>
+            <p itemprop="author" class="author"></p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,628</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+              <li class="epub">EPUB</li>
+            </ul>
+            <ul class="date">
+              <li class="notice"><time datetime="2022-6-24" itemprop="datePublished" class="published">2022年6月24日</time>
+              </li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12931-6"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12931-6">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12931-6.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12931-6.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12931-6.jpg 2x"
+              width="100" height="147" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">ゼロからはじめる</span> ゼロからはじめる<br>Galaxy
+              S22<wbr>／<wbr>S22 Ultra スマートガイド<br><span class="sub">［ドコモ／<wbr>au<wbr>対応版］</span></p>
+            <p itemprop="author" class="author">技術評論社編集部　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,580</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li class="notice"><time datetime="2022-6-24" itemprop="datePublished" class="published">2022年6月24日</time>
+              </li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12873-9"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12873-9">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12873-9.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12873-9.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12873-9.jpg 2x"
+              width="100" height="141" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">情報処理技術者試験</span> 令和<wbr>04<wbr>年<wbr>【下期】 基本情報技術者 パーフェクトラーニング過去問題集
+            </p>
+            <p itemprop="author" class="author">山本三雄　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,450</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li class="notice"><time datetime="2022-6-23" itemprop="datePublished" class="published">2022年6月23日</time>
+              </li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12841-8"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12841-8">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12841-8.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12841-8.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12841-8.jpg 2x"
+              width="100" height="141" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">パーフェクトガイド</span> AviUtl パーフェクトガイド</p>
+            <p itemprop="author" class="author">オンサイト　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">2,980</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li class="notice"><time datetime="2022-6-23" itemprop="datePublished" class="published">2022年6月23日</time>
+              </li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12851-7"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12851-7">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12851-7.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12851-7.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12851-7.jpg 2x"
+              width="100" height="128" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">今すぐ使えるかんたん</span> 今すぐ使えるかんたん<br>Windows 11 完全ガイドブック
+              困った解決＆<wbr>便利技<br><span class="sub">［2022-2023<wbr>年最新版］</span></p>
+            <p itemprop="author" class="author">リブロワークス　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,480</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li class="notice"><time datetime="2022-6-23" itemprop="datePublished" class="published">2022年6月23日</time>
+              </li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12837-1"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12837-1">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12837-1.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12837-1.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12837-1.jpg 2x"
+              width="100" height="147" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">COMODO<wbr>（COMODO ライフブック）</span> 時代の変わり目を、やわらかく生きる
+            </p>
+            <p itemprop="author" class="author">石川理恵　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,500</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-22" itemprop="datePublished" class="published">2022年6月22日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12865-4"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12865-4">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12865-4.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12865-4.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12865-4.jpg 2x"
+              width="100" height="139" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title">はじめてでもできる Fusion 360<wbr>入門</p>
+            <p itemprop="author" class="author">田中正史　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">2,880</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-22" itemprop="datePublished" class="published">2022年6月22日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12855-5"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12855-5">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12855-5.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12855-5.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12855-5.jpg 2x"
+              width="100" height="133" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">大きな字でわかりやすい</span> 大きな字でわかりやすい<br>Google グーグル入門</p>
+            <p itemprop="author" class="author">AYURA　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,400</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-22" itemprop="datePublished" class="published">2022年6月22日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12867-8"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12867-8">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12867-8.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12867-8.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12867-8.jpg 2x"
+              width="100" height="141" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">図解即戦力</span> 図解即戦力<br>UML<wbr>のしくみと実装がこれ<wbr>1<wbr>冊でしっかりわかる教科書
+            </p>
+            <p itemprop="author" class="author">株式会社フルネス　尾崎惇史　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">2,400</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-22" itemprop="datePublished" class="published">2022年6月22日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12889-0"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12889-0">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12889-0.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12889-0.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12889-0.jpg 2x"
+              width="100" height="142" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">レシピ集</span> Photoshop<wbr>レタッチレシピ集</p>
+            <p itemprop="author" class="author">楠田諭史　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">2,680</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-21" itemprop="datePublished" class="published">2022年6月21日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12881-4"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12881-4">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12881-4.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12881-4.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12881-4.jpg 2x"
+              width="100" height="141" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">まなびのずかん</span> 地球のしくみがわかる 地学の図鑑</p>
+            <p itemprop="author" class="author">杵島正洋　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">2,680</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-21" itemprop="datePublished" class="published">2022年6月21日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12863-0"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12863-0">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12863-0.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12863-0.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12863-0.jpg 2x"
+              width="100" height="147" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">ゼロからはじめる</span> スマホではじめるビデオ会議 Zoom &amp; Microsoft
+              Teams<br><span class="sub">［iPhone &amp; Android<wbr>対応版］</span></p>
+            <p itemprop="author" class="author">武井一巳　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,200</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-20" itemprop="datePublished" class="published">2022年6月20日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12887-6"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12887-6">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12887-6.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12887-6.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12887-6.jpg 2x"
+              width="100" height="151" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">数学への招待</span> 「微」<wbr>「積」<wbr>で鍛える数学的思考<br><span
+                class="sub">～分けて集める本当の意味がわかる～</span></p>
+            <p itemprop="author" class="author">杉山博宣　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">2,400</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-20" itemprop="datePublished" class="published">2022年6月20日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12859-3"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12859-3">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12859-3.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12859-3.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12859-3.jpg 2x"
+              width="100" height="141" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">図解即戦力</span> 図解即戦力<br>工作機械業界のしくみとビジネスがこれ<wbr>1<wbr>冊でしっかりわかる教科書
+            </p>
+            <p itemprop="author" class="author">永井知美，<wbr/>山口智也　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,500</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+              <li class="epub">EPUB</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-20" itemprop="datePublished" class="published">2022年6月20日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12906-4"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12906-4">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12906-4.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12906-4.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12906-4.jpg 2x"
+              width="100" height="142" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title">プロジェクトマネジメントの基本がこれ<wbr>1<wbr>冊でしっかり身につく本</p>
+            <p itemprop="author" class="author">株式会社TRADECREATE イープロジェクト　前田和哉　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">2,200</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+              <li class="epub">EPUB</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-20" itemprop="datePublished" class="published">2022年6月20日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12734-3"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12734-3">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12734-3.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12734-3.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12734-3.jpg 2x"
+              width="100" height="141" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title">Software Design 2022<wbr>年<wbr>7<wbr>月号</p>
+            <p itemprop="author" class="author"></p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,342</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+              <li class="epub">EPUB</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-17" itemprop="datePublished" class="published">2022年6月17日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12908-8"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12908-8">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12908-8.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12908-8.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12908-8.jpg 2x"
+              width="100" height="142" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title">基礎からの<wbr>Web<wbr>開発リテラシー</p>
+            <p itemprop="author" class="author">増井敏克　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">2,300</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+              <li class="epub">EPUB</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-17" itemprop="datePublished" class="published">2022年6月17日</time></li>
+
+            </ul>
+          </a></li>
+        <li class="new" id="978-4-297-12875-3"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12875-3">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12875-3.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12875-3.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12875-3.jpg 2x"
+              width="100" height="141" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">情報処理技術者試験</span> 令和<wbr>04<wbr>年<wbr>【秋期】 応用情報技術者 パーフェクトラーニング過去問題集
+            </p>
+            <p itemprop="author" class="author">加藤昭，<wbr/>高見澤秀幸，<wbr/>矢野龍王　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,880</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-17" itemprop="datePublished" class="published">2022年6月17日</time></li>
+
+            </ul>
+          </a></li>
+        <li id="978-4-297-12827-2"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12827-2">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12827-2.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12827-2.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12827-2.jpg 2x"
+              width="100" height="142" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">情報処理技術者試験</span> 令和<wbr>04<wbr>年<wbr>【下半期】 IT<wbr>パスポート パーフェクトラーニング過去問題集
+            </p>
+            <p itemprop="author" class="author">五十嵐聡　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,180</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-15" itemprop="datePublished" class="published">2022年6月15日</time></li>
+
+            </ul>
+          </a></li>
+        <li id="978-4-297-12853-1"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12853-1">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12853-1.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12853-1.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12853-1.jpg 2x"
+              width="100" height="127" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title">図解でやさしくわかる ネットワークのしくみ超入門</p>
+            <p itemprop="author" class="author">網野衛二　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,800</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+              <li class="epub">EPUB</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-15" itemprop="datePublished" class="published">2022年6月15日</time></li>
+
+            </ul>
+          </a></li>
+        <li id="978-4-297-12861-6"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12861-6">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12861-6.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12861-6.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12861-6.jpg 2x"
+              width="100" height="147" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">ゼロからはじめる</span> ゼロからはじめる<br>Apple Watch アプリ 完全大事典</p>
+            <p itemprop="author" class="author">田中拓也　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,500</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-15" itemprop="datePublished" class="published">2022年6月15日</time></li>
+
+            </ul>
+          </a></li>
+        <li id="978-4-297-12814-2"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12814-2">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12814-2.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12814-2.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12814-2.jpg 2x"
+              width="100" height="147" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">60<wbr>分でわかる！</span> 60分でわかる！<br>暗号資産 超入門</p>
+            <p itemprop="author" class="author">開米瑞浩　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,200</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+              <li class="epub">EPUB</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-13" itemprop="datePublished" class="published">2022年6月13日</time></li>
+
+            </ul>
+          </a></li>
+        <li id="978-4-297-12835-7"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12835-7">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12835-7.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12835-7.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12835-7.jpg 2x"
+              width="100" height="116" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title">「棒人間」<wbr>からはじめる キャラの描き方 超入門</p>
+            <p itemprop="author" class="author">isuZu　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,800</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-13" itemprop="datePublished" class="published">2022年6月13日</time></li>
+
+            </ul>
+          </a></li>
+        <li id="978-4-297-12883-8"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12883-8">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12883-8.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12883-8.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12883-8.jpg 2x"
+              width="100" height="142" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title">子どもたちの未来を創ったプログラミング教育<br><span
+                class="sub">～日本最初のプログラミング教育を受けた小学生たちは一世代後にどう育ったか、プログラミングが育てた思考・<wbr>創造力～</span></p>
+            <p itemprop="author" class="author">戸塚滝登　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,800</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+              <li class="epub">EPUB</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-09" itemprop="datePublished" class="published">2022年6月9日</time></li>
+
+            </ul>
+          </a></li>
+        <li id="978-4-297-12839-5"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12839-5">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12839-5.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12839-5.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12839-5.jpg 2x"
+              width="100" height="133" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">大きな字でわかりやすい</span> 大きな字でわかりやすい<br>YouTube ユーチューブ入門</p>
+            <p itemprop="author" class="author">AYURA　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,480</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-09" itemprop="datePublished" class="published">2022年6月9日</time></li>
+
+            </ul>
+          </a></li>
+        <li id="978-4-297-12845-6"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12845-6">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12845-6.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12845-6.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12845-6.jpg 2x"
+              width="100" height="128" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">今すぐ使えるかんたん</span> 今すぐ使えるかんたん<br>Google for
+              Education<br><span class="sub">～導入から運用まで、一冊でしっかりわかる本～</span></p>
+            <p itemprop="author" class="author">株式会社電算システム　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">2,200</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-6-09" itemprop="datePublished" class="published">2022年6月9日</time></li>
+
+            </ul>
+          </a></li>
+        <li id="978-4-297-12885-2"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12885-2">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12885-2.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12885-2.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12885-2.jpg 2x"
+              width="100" height="142" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">生物ミステリー<wbr>（生物ミステリー プロ）</span> こっそり楽しむうんこ化石の世界</p>
+            <p itemprop="author" class="author">土屋健　著，<wbr/>ロバート・ジェンキンズ　監修，<wbr/>かわさきしゅんいち　イラスト</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">2,200</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+              <li class="epub">EPUB</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-5-31" itemprop="datePublished" class="published">2022年5月31日</time></li>
+
+            </ul>
+          </a></li>
+        <li id="978-4-297-12849-4"><a itemprop="url" href="/dp/ebook/2022/978-4-297-12849-4">
+            <img itemprop="image"
+              src="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12849-4.jpg"
+              srcset="https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH100_978-4-297-12849-4.jpg 1x, https://image.gihyo.co.jp/assets/images/gdp/2022/thumb/TH200_978-4-297-12849-4.jpg 2x"
+              width="100" height="142" alt="カバー画像" decoding="async" />
+            <p itemprop="name" class="title"><span class="series">今すぐ使えるかんたん<wbr>Ex</span> 今すぐ使えるかんたんEx<br>Microsoft
+              Teams プロ技<wbr>BEST<wbr>セレクション</p>
+            <p itemprop="author" class="author">リンクアップ　著</p>
+            <p itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="price"><span
+                itemprop="price">1,680</span>円
+              <meta itemprop="priceCurrency" content="JPY" />
+            </p>
+            <ul class="format">
+              <li class="pdf">PDF</li>
+            </ul>
+            <ul class="date">
+              <li><time datetime="2022-5-30" itemprop="datePublished" class="published">2022年5月30日</time></li>
+
+            </ul>
+          </a></li>
+      </ul>
+      <nav id="pagingBottom">
+        <ul>
+          <li><span class="prev">―</span></li>
+          <li class="paging-number">1 - 30 / 3481</li>
+          <li><a href="/dp?start=30" title="次のページ" class="next">次</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <footer id="footer" itemscope="itemscope" itemtype="http://www.schema.org/WPFooter">
+    <div id="wait" class="hidden"></div>
+    <nav id="navigation" itemscope="itemscope" itemtype="http://www.schema.org/SiteNavigationElement">
+      <ul id="navigationLink">
+        <li id="navLinkHome" class="current"><a itemprop="url" href="/dp" title="ストア" class="home">ストア</a></li>
+        <li id="navLinkMyPage"><a itemprop="url" href="/dp/my-page" title="マイページ" class="mypage">マイページ</a></li>
+        <li id="navLinkInfor"><a itemprop="url" href="/dp/information" title="お知らせ" class="information">お知らせ</a></li>
+        <li id="navLinkHelp"><a itemprop="url" href="/dp/help" title="ヘルプ" class="help">ヘルプ</a></li>
+      </ul>
+    </nav>
+    <nav id="function" itemscope="itemscope" itemtype="http://www.schema.org/WPSideBar">
+      <div id="backgroundWrapper"></div>
+      <div id="navInfor">
+        <p class="page">1 - 30 / 3481</p>
+      </div>
+    </nav>
+    <div id="storeInformation">
+      <ul id="footerLink">
+        <li>Twitter: <a href="https://twitter.com/gihyoDP">@gihyoDP</a></li>
+        <li><a href="/dp/help/about/site">このサイトについて</a></li>
+        <li><a href="/dp/help/about/terms">利用規約</a></li>
+        <li><a href="/dp/help/about/privacy">プライバシーポリシー</a></li>
+        <li><a href="/dp/help/about/law">特定商取引法に基づく表示</a></li>
+      </ul>
+      <p id="storeCopyright"><small>Copyright © 2022 <span class="reserved">All Rights Reserved by</span> <a
+            href="/book">Gijutsu-Hyoron Co., Ltd.</a></small></p>
+    </div>
+  </footer>
+  <script>var params = { "url": "https:\/\/gihyo.jp\/dp", "path": "\/dp", "body": "    <div id=\"bookList\">\n      <h2>\u5546\u54c1\u4e00\u89a7<\/h2>\n      <div id=\"topNavigation\">\n        <div id=\"filter\">\n          <form id=\"search\" action=\"\/dp\" method=\"get\">\n            <input type=\"search\" name=\"query\" id=\"searchText\" title=\"\u691c\u7d22\u3059\u308b\u5546\u54c1\u306e\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\" placeholder=\"\u5546\u54c1\u306e\u30ad\u30fc\u30ef\u30fc\u30c9\" required=\"required\" value=\"\"\/>\n            <input type=\"submit\" id=\"searchSubmit\" value=\"\u691c\u7d22\" title=\"\u691c\u7d22\u3059\u308b\"\/>\n          <\/form>\n          <div id=\"select\">\n            <a href=\"\" id=\"selectLabel\" title=\"\u5546\u54c1\u30b8\u30e3\u30f3\u30eb\u3092\u9078\u629e\u3059\u308b\"><\/a>\n            <div id=\"selectMenu\">\n              <ul id=\"selectMenuBody\"><\/ul>\n            <\/div>\n          <\/div>\n        <\/div>\n        <nav id=\"pagingTop\">\n        <\/nav>\n      <\/div>\n      <ul itemprop=\"isPartOf\" itemscope=\"itemscope\" itemtype=\"http:\/\/www.schema.org\/CollectionPage\" id=\"listBook\" class=\"list-book\">\n      <\/ul>\n      <nav id=\"pagingBottom\">\n      <\/nav>\n    <\/div>", "isLogin": false, "dialog": "<aside id=\"dialog\" class=\"dialog-login\" style=\"opacity:0\">\n  <div id=\"dialogBody\">\n    <div id=\"gihyoAccount\">\n      <h2>\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9\u3067\u30ed\u30b0\u30a4\u30f3<\/h2>\n      <form action=\"?login\" method=\"post\">\n        <input type=\"hidden\" name=\"fid\" value=\"\"\/>\n        <dl>\n          <dt>\u30a2\u30ab\u30a6\u30f3\u30c8<\/dt>\n          <dd><input type=\"email\" name=\"account\" placeholder=\"\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9\" required=\"required\" title=\"\u30a2\u30ab\u30a6\u30f3\u30c8\u306e\u30e1\u30fc\u30eb\u30a2\u30c9\u30ec\u30b9\u3092\u5165\u529b\"\/><\/dd>\n          <dt>\u30d1\u30b9\u30ef\u30fc\u30c9<\/dt>\n          <dd><input type=\"password\" name=\"password\" placeholder=\"\u30d1\u30b9\u30ef\u30fc\u30c9\" required=\"required\" title=\"\u30a2\u30ab\u30a6\u30f3\u30c8\u306e\u30d1\u30b9\u30ef\u30fc\u30c9\u3092\u5165\u529b\"\/><\/dd>\n        <\/dl>\n        <p id=\"loginButton\"><input type=\"submit\" value=\"\u30ed\u30b0\u30a4\u30f3\" title=\"\u30ed\u30b0\u30a4\u30f3\u3059\u308b\"\/><\/p>\n        <ul id=\"loginFunction\">\n          <li><a href=\"\/dp\/help\/buy\/forgot\">\u30d1\u30b9\u30ef\u30fc\u30c9\u3092\u304a\u5fd8\u308c\u306e\u65b9<\/a><\/li>\n          <li><a href=\"\/dp\/help\/buy\/account\">\u65b0\u898f\u767b\u9332\u3092\u3054\u5e0c\u671b\u306e\u65b9<\/a><\/li>\n        <\/ul>\n      <\/form>\n    <\/div>\n    <div id=\"externalSite\">\n      <h2>\u5916\u90e8\u30b5\u30fc\u30d3\u30b9\u3067\u30ed\u30b0\u30a4\u30f3<\/h2>\n      <ul>\n      <li class=\"google\"><a href=\"https:\/\/gihyo.jp\/auth\/google\">Google<\/a><\/li>\n      <li class=\"facebook\"><a href=\"https:\/\/gihyo.jp\/auth\/facebook\">Facebook<\/a><\/li>\n      <li class=\"yahoo\"><a href=\"https:\/\/gihyo.jp\/auth\/yahoojp\">Yahoo! JAPAN<\/a><\/li>\n      <\/ul>\n      <p><a href=\"\/dp\/help\/buy\/external\">\u5916\u90e8\u30b5\u30fc\u30d3\u30b9\u3067\u306e\u30ed\u30b0\u30a4\u30f3\u306b\u3064\u3044\u3066<\/a><\/p>\n    <\/div>\n    <p id=\"close\"><a href=\"#close\" title=\"\u9589\u3058\u308b\">\u9589\u3058\u308b<\/a><\/p>\n  <\/div>\n<\/aside>" }</script>
+  <script>var asyncCall = function () { var e = Array.prototype.slice, a = Function.prototype.bind || function (j) { var a = this, b = e.call(arguments, 1); return function () { var c = e.call(arguments); return a.apply(j, b.concat(c)) } }, f = a.call(a, Function.prototype.call), b = f(e), c = f(a), d = f(Function.prototype.apply); if ("undefined" !== typeof process) a = function () { var a = b(arguments); process.nextTick(d(c, null, a)) }; else if ("function" === typeof setImmediate) a = function () { var a = b(arguments); setImmediate(d(c, null, a)) }; else if ("function" === typeof MessageChannel) { var g = new MessageChannel, h = []; g.port1.onmessage = function () { h.shift()() }; a = function () { var a = b(arguments); h.push(d(c, null, a)); g.port2.postMessage(0) } } else a = function () { var a = b(arguments); setTimeout(d(c, null, a), 0) }; return a }(); window.onerror = function (mes, fname, lnum) { var erIgnore = ['top.GLOBALS', 'originalCreateNotification', 'canvas.contentDocument', 'fb_xd_fragment', 'Script error.']; for (i = 0; i < erIgnore.length; i++) { if (mes.indexOf(erIgnore[i]) > -1) { return false; } }; var mes = 'message:' + mes + ', file:' + fname + ', line:' + lnum + ', href:' + location.href + ', UA:' + window.navigator.userAgent; gtag('event', 'JSError', { 'evetn_category': 'Error', 'event_label': mes }); };</script>
+  <script src="//platform.twitter.com/widgets.js" id="twitter-wjs" async defer></script>
+  <script src="//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=185201618169441&version=v2.8" id="facebook-jssdk" async
+    defer></script>
+  <script src="//apis.google.com/js/platform.js" async defer></script>
+  <script src="//b.hatena.ne.jp/js/bookmark_button.js" charset="utf-8" async defer></script>
+</body>
+
+</html>
